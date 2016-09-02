@@ -17,7 +17,10 @@
 // write your code here
 
 
-
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+for day in daysOfTheWeek {
+    print(day)
+}
 
 
 
@@ -28,7 +31,10 @@
 // write your code here
 
 
-
+let numDaysOfTheWeek = daysOfTheWeek
+for (index, theDay) in numDaysOfTheWeek.enumerate() {
+    print("\(index + 1). \(theDay)")
+}
 
 
 
@@ -39,8 +45,12 @@
 // write your code here
 
 
-
-
+var emptyArray: [String] = []
+if emptyArray.isEmpty {
+    print("Your array is empty")
+} else {
+    print("We've got Values!")
+}
 
 
 
@@ -50,7 +60,12 @@
  */
 // write your code here
 
-
+var reverseEmptyArray: [String] = []
+if !emptyArray.isEmpty {
+    print("Your array is empty.")
+} else {
+    print("We've got values!")
+}
 
 
 
@@ -63,7 +78,7 @@
  */
 // write your code here
 
-
+print("There are \(daysOfTheWeek.count) values in your daysOfTheWeek array.")
 
 
 
@@ -76,7 +91,12 @@
 // write your code here
 
 
+daysOfTheWeek.append("Saturday")
+daysOfTheWeek.append("Sunday")
 
+for (index, allTheDays) in daysOfTheWeek.enumerate() {
+    print("\(index + 1). \(allTheDays)")
+}
 
 
 
@@ -87,7 +107,9 @@
 // write your code here
 
 
-
+daysOfTheWeek.removeAtIndex(6)
+daysOfTheWeek.insert("Sunday", atIndex: 0)
+print(daysOfTheWeek)
 
 
 
@@ -101,16 +123,25 @@
 
 
 
+for capitalDays in daysOfTheWeek {
+    capitalDays.lowercaseString
+    daysOfTheWeek.append(capitalDays.lowercaseString)
+    daysOfTheWeek.removeAtIndex(0)
+}
 
-
-
+print(daysOfTheWeek)
 
 /*: question9
  ### 9. Check to see if the size of the array is greater than 5, i.e. contains the days of the weekend. If so, remove the days of the weekend from the array.
  */
 // write your code here
 
+if daysOfTheWeek.count > 4 {
+        daysOfTheWeek.removeAtIndex(0)
+        daysOfTheWeek.removeAtIndex(5)
+    }
 
+print(daysOfTheWeek)
 
 
 
